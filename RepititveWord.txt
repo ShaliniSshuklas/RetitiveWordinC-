@@ -1,0 +1,30 @@
+public class HelloWorld
+{
+
+    public static void Main(string[] args)
+    {
+        string word = "stress";
+        Dictionary<char, int> letterCount = new Dictionary<char, int>();
+
+        foreach (var item in word)
+        {
+            if (letterCount.ContainsKey(item))
+            {
+
+                letterCount[item]++;
+            }
+            else
+            {
+                letterCount[item] = 1;
+            }
+        }
+
+        foreach (var item in letterCount)
+        {
+            if (item.Value > 1) { 
+               Console.WriteLine($" the retitive word of {item.Key} is {item.Value}");
+            }
+        }
+
+    }
+}
